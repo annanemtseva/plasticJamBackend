@@ -1,0 +1,123 @@
+{
+	"id": "1928fae1-61fd-aaa8-c269-c2b8068a88c3",
+	"name": "plasticJamBackend",
+	"description": "",
+	"order": [
+		"b4c708ae-43f1-d955-eae6-8e9f0b6fd7aa",
+		"68e2563e-2d47-8ca2-de1c-a36f13dc7d9b",
+		"d8632524-db52-898c-78be-ca9800d1b4ee"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1593553703169,
+	"owner": "10940659",
+	"public": false,
+	"requests": [
+		{
+			"id": "68e2563e-2d47-8ca2-de1c-a36f13dc7d9b",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/task/api/v1/users/statistic?id=33&from=2018-01-06&to=2020-10-02",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "33",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "from",
+					"value": "2018-01-06",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "to",
+					"value": "2020-10-02",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "1928fae1-61fd-aaa8-c269-c2b8068a88c3",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:3000/task/api/v1/users/statistic?id=33&from=2018-01-06&to=2020-10-02",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1593553736366,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "b4c708ae-43f1-d955-eae6-8e9f0b6fd7aa",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/task/api/v1/users?page=5&range=10",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "5",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "range",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "1928fae1-61fd-aaa8-c269-c2b8068a88c3",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:3000/task/api/v1/users?page=5&range=10",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1593553726244,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "d8632524-db52-898c-78be-ca9800d1b4ee",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "1928fae1-61fd-aaa8-c269-c2b8068a88c3",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:3000",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1593553744354,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
