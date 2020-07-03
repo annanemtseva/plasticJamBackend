@@ -22,7 +22,7 @@ router.get('/', function (req, res, next) {
     result.push(
       {
         id: index + 1,
-        firstName: "Christie" + index,
+        firstName: "Chris" + (index + 1),
         lastName: "Gann",
         email: `cgann0${index}@hostgator.com`,
         gender: index % 3 == 0 ? 'Male' : 'Female',
