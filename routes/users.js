@@ -15,31 +15,37 @@ router.get('/', function (req, res, next) {
   const endIndex = startIndex + range;
   const result = new Array();
 
-  for (let index = startIndex; index < endIndex; index++) {
+  for (let index = startIndex; index < endIndex && index <= 105; index++) {
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
     result.push(
       {
-        id: index,
+        id: index + 1,
         firstName: "Christie" + index,
         lastName: "Gann",
         email: `cgann0${index}@hostgator.com`,
         gender: index % 3 == 0 ? 'Male' : 'Female',
-        totalClicks: 13469,
-        totalPageViews: 15299,
+        totalClicks: getRandomInt(500),
+        totalPageViews: getRandomInt(300),
         ipAddress: `57.14.195.${index}`
       });
   }
 
   res.json({
     content: result,
-    totalPages: 100,
-    totalElements: 1000,
+    totalPages: Math.ceil(105 / range) ,
+    totalElements: 105,
   });
   
 });
 
 /* GET user statistic. */
 router.get('/statistic', function (req, res, next) {
+  console.log('from = ', req.query.from);
+  console.log('to = ', req.query.to);
   const from = Date.parse(req.query.from);
+  
   const to = Date.parse(req.query.to);
   const userId = Number(req.query.id);
   
@@ -52,12 +58,13 @@ router.get('/statistic', function (req, res, next) {
   }
 
   for (var month of range.by('days')) {
-    const pp = month.format('YYYY-MM-DD');
+    const parseDate = month.format('YYYY-MM-DD');
+    console.log("parseDate = ", parseDate);
     result.push(
       {
         id: result.length + 1,
         page_views: getRandomInt(300),
-        date: pp,
+        date: parseDate,
         clicks: getRandomInt(400),
         userId: userId
 
